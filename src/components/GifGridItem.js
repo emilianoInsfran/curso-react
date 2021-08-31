@@ -1,7 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export const GifGridItem = ( {id,title,url} ) => {
-    console.log(id,title,url)
     // //como class es una palabra reservada de js le pusieron className
     return (
         <div className="card">
@@ -10,3 +10,9 @@ export const GifGridItem = ( {id,title,url} ) => {
         </div>
     )
 } 
+
+
+GifGridItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+}

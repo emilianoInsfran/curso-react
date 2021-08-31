@@ -7,10 +7,13 @@ export const AddCategory = ( { setCategory } )=> {//utilice la desestructuració
 
     const handleInputChange = (e)=>{
         setInputValue(e.target.value);
+        console.log("Se llamo handleInputChange");
     }
 
     const handleSubmit = (e) =>{
         e.preventDefault()
+
+        console.log("se llamo a handlesubmit",inputValue);
         if(inputValue.trim().length > 2){//trim borra los espacio dentro de un string
             setCategory(cats => [ inputValue,...cats,])
             setInputValue('');
